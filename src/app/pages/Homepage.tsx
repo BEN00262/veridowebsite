@@ -11,6 +11,7 @@ import StatsSection from "../components/StatsSection";
 import CleanCard from "../components/CleanCard";
 import BusinessToolCard from "../components/BusinessToolCard";
 import ComparisonTable from "../components/ComparisonTable";
+import { ScrollToTopButton } from "../components/ScrollToTopButton";
 import { Button } from "../components/ui/button";
 import { 
   PlantIcon, 
@@ -917,6 +918,9 @@ export default function Homepage() {
 
       {/* 12. FOOTER */}
       <Footer />
+
+      {/* SCROLL TO TOP BUTTON */}
+      <ScrollToTopButton />
     </div>
   );
 }

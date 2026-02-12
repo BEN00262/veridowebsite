@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import { ScrollToTopButton } from "../components/ScrollToTopButton";
 import { Button } from "../components/ui/button";
 import { 
   StoreIcon,
@@ -113,6 +114,16 @@ export default function Agribusiness() {
                 />
                 {/* Glow effect behind phone */}
                 <div className="absolute inset-0 bg-[#d4a574] opacity-30 blur-[80px] -z-10"></div>
+
+                {/* LIVE Badge */}
+                <div className="absolute bottom-4 right-4 bg-[#10b981] rounded-full px-3.5 py-2 shadow-[0px_10px_15px_0px_rgba(0,0,0,0.1),0px_4px_6px_0px_rgba(0,0,0,0.1)] border-2 border-[rgba(255,255,255,0.2)] flex items-center gap-1.5">
+                  <motion.div 
+                    animate={{ scale: [1, 1.2, 1], opacity: [0.8, 1, 0.8] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className="w-2 h-2 bg-white rounded-full"
+                  />
+                  <span className="text-[9px] font-black text-white uppercase tracking-[0.45px]">LIVE</span>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -749,6 +760,9 @@ export default function Agribusiness() {
 
       {/* Footer */}
       <Footer />
+
+      {/* SCROLL TO TOP BUTTON */}
+      <ScrollToTopButton />
     </div>
   );
 }

@@ -51,6 +51,10 @@ export default function Navigation() {
     }
   };
 
+  const handleHomeClick = () => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
+
   const isActive = (path: string) => {
     // Home page check
     if (path === '/') {
@@ -72,7 +76,7 @@ export default function Navigation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center group">
+            <Link to="/" onClick={handleHomeClick} className="flex items-center group">
               <motion.img 
                 src={veridoLogo} 
                 alt="Verido" 
@@ -87,6 +91,7 @@ export default function Navigation() {
               {/* Home Tab */}
               <Link
                 to="/"
+                onClick={handleHomeClick}
                 className={`relative font-medium transition-colors px-4 py-2 rounded-lg group ${
                   isActive('/') ? 'text-[#0a4521]' : 'text-gray-600 hover:text-[#0a4521]'
                 }`}
@@ -207,6 +212,7 @@ export default function Navigation() {
                 {/* Home Link */}
                 <Link
                   to="/"
+                  onClick={handleHomeClick}
                   className={`block px-3 py-3 rounded-xl transition-all font-medium ${
                     isActive('/')
                       ? 'bg-[#162F21]/5 border-2 border-[#162F21] text-[#162F21]'

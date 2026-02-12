@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import { ScrollToTopButton } from "../components/ScrollToTopButton";
 import FAQ from "../components/FAQ";
 import ContactForm from "../components/ContactForm";
 import WhyWeBuilt from "../components/WhyWeBuilt";
@@ -517,6 +518,9 @@ export default function Companies() {
 
       {/* 10. FOOTER */}
       <Footer />
+
+      {/* SCROLL TO TOP BUTTON */}
+      <ScrollToTopButton />
     </div>
   );
 }

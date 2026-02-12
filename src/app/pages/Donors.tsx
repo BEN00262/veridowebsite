@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import { ScrollToTopButton } from "../components/ScrollToTopButton";
 import { 
   AlertIcon,
   CheckIcon,
@@ -105,21 +106,21 @@ export default function Donors() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex justify-center lg:justify-end relative"
+              className="flex justify-center lg:justify-start"
             >
               <div className="relative">
-                {/* Glow behind phone */}
-                <div className="absolute inset-0 bg-[#d4a574] opacity-30 blur-[80px] -z-10"></div>
-                
                 {/* Phone Image */}
                 <img 
                   src={imgImageVeridoMobileApp} 
                   alt="Verido Mobile App" 
-                  className="w-[200px] md:w-[240px] lg:w-[185px] h-auto rounded-2xl shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.6),0px_25px_50px_0px_rgba(0,0,0,0.15)]"
+                  className="w-[240px] md:w-[280px] lg:w-[320px] h-auto drop-shadow-2xl"
                 />
+                
+                {/* Glow effect behind phone */}
+                <div className="absolute inset-0 bg-[#d4a574] opacity-30 blur-[80px] -z-10"></div>
 
                 {/* LIVE Badge */}
-                <div className="absolute top-[-19px] left-[110px] bg-[#10b981] rounded-full px-3.5 py-2 shadow-[0px_10px_15px_0px_rgba(0,0,0,0.1),0px_4px_6px_0px_rgba(0,0,0,0.1)] border-2 border-[rgba(255,255,255,0.2)] flex items-center gap-1.5">
+                <div className="absolute bottom-4 right-4 bg-[#10b981] rounded-full px-3.5 py-2 shadow-[0px_10px_15px_0px_rgba(0,0,0,0.1),0px_4px_6px_0px_rgba(0,0,0,0.1)] border-2 border-[rgba(255,255,255,0.2)] flex items-center gap-1.5">
                   <motion.div 
                     animate={{ scale: [1, 1.2, 1], opacity: [0.8, 1, 0.8] }}
                     transition={{ duration: 2, repeat: Infinity }}
@@ -1045,6 +1046,9 @@ export default function Donors() {
 
       {/* Footer */}
       <Footer />
+
+      {/* SCROLL TO TOP BUTTON */}
+      <ScrollToTopButton />
     </div>
   );
 }
