@@ -195,7 +195,7 @@ export default function Homepage() {
               <span className="text-base font-bold text-[#162F21] tracking-wide uppercase">Business Tools</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Everything You Need to Manage Your Business
+              Everything Retailers and Agents Need to Manage Business
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Replace relationship guesswork with powerful data-driven tools designed for small businesses
